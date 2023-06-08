@@ -1,0 +1,3 @@
+rootProject.name = "My Application"
+include ':app'
+// ChadDevz Release June 8 2023 GitHub

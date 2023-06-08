@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+		<View
+			android:id="@+id/view_blank"
+			android:background="@color/purple_700"
+			android:layout_width="fill_parent"
+			android:layout_height="260.0dip"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent"/>
+
+		<RelativeLayout
+			android:id="@+id/statsLayout"
+			android:padding="15.0dip"
+			android:layout_width="fill_parent"
+			android:layout_height="160.0dip"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent">
+
+			<ImageView
+				android:id="@+id/image_logo"
+				android:layout_width="100.0dip"
+				android:layout_height="100.0dip"
+				android:src="@drawable/ic_launcher_foreground"
+				android:layout_centerInParent="true"/>
+
+			<LinearLayout
+				android:gravity="center"
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10.0dip"
+				android:layout_below="@+id/image_logo">
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/midLayout"
+			android:padding="15.0dip"
+			android:layout_width="fill_parent"
+			android:layout_height="0.0dip"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/statsLayout">
+
+			<androidx.cardview.widget.CardView
+				android:id="@+id/card"
+				android:visibility="visible"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="10.0dip"
+				app:cardCornerRadius="6.0dip"
+				app:cardElevation="5.0dip"
+				app:cardUseCompatPadding="true">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:padding="10.0dip"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+
+					<LinearLayout
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:orientation="vertical"
+						android:layout_gravity="center"
+						android:gravity="center">
+
+						<TextView
+							android:layout_height="wrap_content"
+							android:layout_width="match_parent"
+							android:layout_marginVertical="16dp"
+							android:gravity="center_horizontal"
+							android:textSize="30sp"
+							android:textColor="@color/purple_500"
+							android:text="Login"
+							android:textStyle="bold"/>
+
+						<com.google.android.material.textfield.TextInputLayout
+							android:layout_height="wrap_content"
+							android:layout_width="match_parent"
+							style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+							<com.google.android.material.textfield.TextInputEditText
+								android:layout_height="wrap_content"
+								android:layout_width="match_parent"
+								android:hint="Email"
+								android:inputType="textEmailAddress"
+								android:id="@+id/etLoginEmail"/>
+
+						</com.google.android.material.textfield.TextInputLayout>
+
+						<com.google.android.material.textfield.TextInputLayout
+							android:layout_height="wrap_content"
+							android:layout_width="match_parent"
+							style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+							android:layout_marginTop="10dp">
+
+							<com.google.android.material.textfield.TextInputEditText
+								android:layout_height="wrap_content"
+								android:layout_width="match_parent"
+								android:hint="Password"
+								android:inputType="textPassword"
+								android:id="@+id/etLoginPass"/>
+
+						</com.google.android.material.textfield.TextInputLayout>
+
+						<com.google.android.material.button.MaterialButton
+							android:layout_height="wrap_content"
+							android:layout_width="match_parent"
+							android:layout_marginTop="10dp"
+							android:id="@+id/btnLogin"
+							android:text="Login"/>
+
+						<LinearLayout
+							android:layout_height="wrap_content"
+							android:layout_width="match_parent"
+							android:gravity="center"
+							android:orientation="horizontal"
+							android:layout_marginTop="5dp">
+
+							<TextView
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"
+								android:textSize="15sp"
+								android:text="Not registered yet"/>
+
+							<TextView
+								android:layout_height="wrap_content"
+								android:layout_width="wrap_content"
+								android:textSize="15sp"
+								android:layout_marginLeft="8dp"
+								android:textColor="@color/purple_500"
+								android:id="@+id/tvRegisterHere"
+								android:text="Register here"
+								android:textStyle="bold"/>
+
+						</LinearLayout>
+
+						<LinearLayout
+							android:orientation="horizontal"
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:layout_marginTop="10dp">
+
+							<Button
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="SIGN IN WITH GOOGLE"
+								android:id="@+id/signInWithGoogle"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</androidx.cardview.widget.CardView>
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+

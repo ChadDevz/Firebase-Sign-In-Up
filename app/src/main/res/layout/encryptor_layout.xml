@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<include
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		layout="@layout/toolbar_main"/>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="10dp">
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:gravity="center"
+			android:background="@drawable/button_bg"
+			android:orientation="vertical">
+
+			<Spinner
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/activitymainSpinner1"/>
+
+		</LinearLayout>
+
+		<com.google.android.material.textfield.TextInputEditText
+			android:layout_width="match_parent"
+			android:inputType="textMultiLine"
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:layout_marginTop="5dp"
+			android:hint="Input Text to Convert"
+			android:id="@+id/encrypt_decrypt"/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="CONVERT"
+			android:id="@+id/convert"
+			android:layout_marginTop="5dp"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="10dp">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="500dp"
+			android:text="encrypted"
+			android:id="@+id/activitymainTextView1"/>
+
+		<include
+			layout="@layout/h_to"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+
